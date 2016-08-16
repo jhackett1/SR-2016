@@ -73,21 +73,24 @@ header
     nav ul
       margin: 0
 
-  nav:first-of-type div ul li
-    display: inline-block
-    font-family: $h-stack
-    font-weight: 400
-    text-transform: uppercase
-    margin-right: 0px
-    padding: 5px 3px 5px 3px
-    height: 100%
+  nav:first-of-type div ul
+    padding-left: 0px
 
-  a
-    color: $text
+    li
+      display: inline-block
+      font-family: $h-stack
+      font-weight: 400
+      text-transform: uppercase
+      margin-right: 0px
+      padding: 5px 3px 5px 3px
+      height: 100%
 
-  a
-    color: $text
-    text-decoration: none !important
+      a
+        color: $text
+
+      a
+        color: $text
+        text-decoration: none !important
 
   nav:first-of-type div ul li:hover
     background-color: rgba(0,0,0,0.1)
@@ -125,6 +128,68 @@ section#masthead, footer
   z-index: 7
   top: 0
   width: 100%
+
+//Search modal
+
+section#overlay
+  display: none
+  position: absolute
+  top: 0
+  right: 0
+  left: 0
+  bottom: 0
+  background-color: rgba(255,255,255,0.8)
+  filter: blur(2px)
+  -webkit-filter: blur(2px)
+  z-index: 9999
+  transition: 0.2s
+
+section#overlay.on
+  display: block !important
+  transition: 0.2s
+
+div#search-modal
+  z-index: 999999999
+  background-color: #efefef
+  padding: 20px
+  border: 0.5px solid #dfdfdf
+  position: fixed
+  left: 50%
+  top: 50%
+  transform: translate(-50%,-50%)
+  -webkit-transform: translate(-50%,-50%)
+  -ms-transform: translate(-50%,-50%)
+  border-radius: 2px
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.1)
+  font-family: $p-stack
+  display: none
+  transition: 0.1s
+
+  form
+    input#s
+      padding: 13px
+      font-size: 1em
+      text-transform: uppercase
+      font-family: $p-stack
+      font-weight: 100
+      border: 0px
+      color: $dark-red
+      min-width: 300px
+
+    input#searchsubmit
+      padding: 13px 15px
+      color: $background
+      background-color: $brand-red
+      border: 0px
+      font-size: 1em
+      font-family: $p-stack
+      cursor: pointer
+
+    input#searchsubmit:hover
+      background-color: $dark-red
+
+div#search-modal.on
+  display: block
 
 // Footer styles
 
@@ -165,6 +230,130 @@ footer
   img#union-logo
     margin-top: 20px
 
+//Floating menu styles
+section#menu-panel.on
+  left: 0px
+  transition: 0.2s
+
+section#menu-panel
+  height: 100%
+  max-width: 100%
+  position: fixed
+  left: -100%
+  top: 0
+  right: 0
+  background-color: $background
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.3)
+  z-index: 999999999
+  transition: 0.2s
+  padding: 20px
+  box-sizing: border-box
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+  nav p
+    font-family: $p-stack
+    font-weight: 100
+    color: $mid-grey
+    text-transform: uppercase
+    font-size: 0.7em
+    margin-bottom: 5px
+    margin-top: 20px
+
+  i.fa-times
+    color: $mid-grey
+    cursor: pointer
+    transition: 0.1s
+    position: absolute
+    right: 20px
+    top: 20px
+
+  i.fa-times:hover
+    transform: scale(1.1,1.1)
+
+  hr
+    width: 30px
+    border: 3px solid $light-grey
+    margin-bottom: 20px
+
+
+  nav:first-of-type
+    margin: 0px 40px 0px 0px
+
+    ul
+      list-style-type: none
+      padding-left: 10px
+
+      li:hover
+        background-color: $light-grey
+
+      li
+        font-family: $h-stack
+        text-transform: uppercase
+        font-weight: 100
+        border-bottom: 0.5px solid #dfdfdf
+        font-size: 1em
+        padding: 5px 5px 10px 5px
+        transition: 0.1s
+
+        a
+          color: $text
+          display: block
+
+        a:hover
+          text-decoration: none
+
+  nav:nth-of-type(2)
+    margin: 0px 40px 0px 0px
+
+    ul
+      list-style-type: none
+      padding-left: 10px
+
+      li
+        font-family: $h-stack
+        text-transform: uppercase
+        font-weight: 100
+        font-size: 0.9em
+        padding: 5px 0px 5px 0px
+        transition: 0.1s
+        color: #505050
+
+
+        a
+          color: #505050
+
+  nav:last-of-type
+    margin: 0px 40px 0px 0px
+
+    hr
+      margin: 20px 10px
+
+    ul
+      list-style-type: none
+      padding-left: 10px
+
+      li:hover
+        background-color: $light-grey
+
+      li
+        font-family: $h-stack
+        text-transform: uppercase
+        font-weight: 100
+        font-size: 1.2em
+        padding: 10px 15px 10px 15px
+        transition: 0.1s
+        display: inline
+
+        a
+          color: $text
+
+
+
+
+
+
 // Homepage styles
 
 section#hero
@@ -200,7 +389,6 @@ article#homepage
   z-index: 2
   position: relative
   min-height: 1000px
-  box-shadow: 2px 2px 0px rgba(0,0,0,0.1)
   box-sizing: border-box
 
   *
@@ -218,6 +406,7 @@ article#homepage
     text-align: center
     font-family: $p-stack
     text-transform: uppercase
+    cursor: pointer
 
   section#menu
     margin-bottom: 60px
@@ -690,3 +879,11 @@ div.single_container
     img
       max-width: 100%
       height: auto
+
+    h2, h3, h4, h5
+      font-size: 2.3em
+      color: $text
+      margin: 20px 0px 20px 0px !important
+
+    iframe, .twitterwidget
+      margin: 20px 0px 20px 0px !important

@@ -7,7 +7,7 @@
 
     <p>© University of Westminster Students' Union <?php echo date("Y"); ?> &middot; Developed by <a href="http://joshuahackett.com">Joshua Hackett</a></p>
 
-    <img id="union-logo" src="wp-content/themes/SM-2016/img/uwsu.png"/>
+    <img id="union-logo" src="<?php echo get_template_directory_uri() ?>/img/uwsu.png"/>
   </div>
 </footer>
 

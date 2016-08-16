@@ -4,10 +4,6 @@
 //Styling for tablets and smaller
 @media (max-width: 1070px)
 
-  section#hero
-    height: 200px
-    position: relative
-
   section#player
     position: relative
     margin: 20px auto
@@ -20,6 +16,19 @@
   section#menu
     ul
       text-align: center
+
+//Styling for phones and smaller
+@media (max-width: 650px)
+
+  .mobilehide
+    display: none !important
+
+  .mobileshow
+    display: block !important
+
+  section#hero
+    height: 200px
+    position: relative
 
   a#logo
     margin: 20px auto
@@ -46,22 +55,29 @@
           h2
             font-size: 2.2em
 
-  .mobilehide
-    display: none !important
-
-  .mobileshow
-    display: block !important
-
-
-//Styling for phones and smaller
-@media (max-width: 650px)
   section#featured
     flex-direction: column
 
     div.featured
       width: 100%
-      margin-right: none
-      margin-bottom: 10px
+      margin-right: 0px
+      margin-bottom: 20px
+
+      h3
+        left: 10px
+
+  section#latest
+    flex-direction: column
+
+    div#latest
+      margin: 0px 5px
+      width: 100% !important
+
+      div#latest_box
+        flex-direction: column
+
+        div.spacer
+          width: 100%
 
   section#menu
     nav
@@ -69,6 +85,9 @@
 
     span#burger
       display: block
+
+  footer
+    margin-bottom: 50px
 
 
 @media (max-width: 500px)

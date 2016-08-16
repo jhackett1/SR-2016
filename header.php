@@ -25,6 +25,8 @@
 <body>
 
 <section id="overlay"></section>
+<?php get_template_part( "search-modal" ); ?>
+<?php get_template_part( "menu-panel" ); ?>
 
 <header id="normal" class="mobilehide">
   <div class="container">
@@ -71,7 +73,7 @@
     <nav>
       <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
     </nav>
-    <span id="burger"><i class="fa fa-bars"></i> Menu</span>
+    <span id="burger" class="menu-on"><i class="fa fa-bars"></i> Menu</span>
   </section>
 
   <!-- The player icon -->
