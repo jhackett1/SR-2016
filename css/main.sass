@@ -1,0 +1,690 @@
+// Variables
+
+$text: #2d2d2d
+$background: #fafafa
+$light-grey: #efefef
+$mid-grey: #505050
+$brand-red: #9c1f32
+$dark-red: #6f1523
+$views: #a73b4b
+$lifestyle: #9bce6f
+$reviews: #98509c
+$music: #e78357
+$culture: #68bcbb
+$fashion: #3c3a3a
+$h-stack: Oswald, sans serif
+$p-stack: Lato, serif
+
+// Basic style resets
+
+body
+  background-color: $background
+  box-sizing: border-box
+  position: relative
+  margin: 0
+
+::selection
+  background-color: rgba(156,31,50,0.5)
+
+a
+  text-decoration: none
+  color: $brand-red
+
+.mobileshow
+  display: none
+
+a:hover
+  text-decoration: none
+
+
+h1, h2, h3, h4, h5
+  font-family: $h-stack
+  text-transform: uppercase
+
+p
+  font-family: $p-stack
+
+div.container
+  max-width: 1000px
+  margin: 0px auto
+
+//Global menu and header styles
+
+header
+  background: #dfdfdf
+  width: 100%
+  border-bottom: 0.5px solid #dfdfdf
+  z-index: 60
+  padding: 0px
+  position: relative
+
+  div.container
+    display: flex
+    display: -webkit-flex
+    flex-direction: row
+    justify-content: space-between
+
+    nav:first-of-type
+      align-items: flex-start
+
+    nav:last-of-type
+      align-items: flex-end
+
+    nav ul
+      margin: 0
+
+  nav:first-of-type div ul li
+    display: inline-block
+    font-family: $h-stack
+    font-weight: 400
+    text-transform: uppercase
+    margin-right: 0px
+    padding: 5px 3px 5px 3px
+    height: 100%
+
+  a
+    color: $text
+
+  a
+    color: $text
+    text-decoration: none !important
+
+  nav:first-of-type div ul li:hover
+    background-color: rgba(0,0,0,0.1)
+
+
+  nav:last-of-type div ul li
+    display: inline-block
+    font-family: $h-stack
+    font-weight: 400
+    text-transform: uppercase
+    margin-right: 0px
+    padding: 5px 5px 5px 5px
+    height: 100%
+
+  a
+    color: $text
+
+  a
+    color: $text
+    text-decoration: none !important
+
+  nav:last-of-type div ul li:hover
+    background-color: rgba(0,0,0,0.1)
+
+
+div#spacer.on
+  width: 100%
+  height: 60px
+
+section#masthead, footer
+  text-align: center
+
+.fixie
+  position: fixed !important
+  z-index: 7
+  top: 0
+  width: 100%
+
+// Footer styles
+
+footer
+  position: relative
+  z-index: 2
+  margin-top: -10px
+
+  .container
+    padding-bottom: 20px
+
+  hr
+    border: 3px solid $brand-red
+    margin-bottom: 10px
+
+  nav
+    padding: 0px 40px 0px 40px
+
+  nav ul li
+    display: inline
+    list-style-type: none
+    font-family: $h-stack
+    margin-right: 5px
+    text-transform: uppercase
+
+    a
+      color: $text
+
+  p
+    font-family: $p-stack
+    font-weight: 100
+    color: $mid-grey
+    text-transform: uppercase
+    font-size: 0.7em
+    margin-bottom: 5px
+    margin-top: 20px
+
+  img#union-logo
+    margin-top: 20px
+
+// Homepage styles
+
+section#hero
+  width: 100%
+  height: 500px
+  background-size: cover
+  background-position: center
+  mix-blend-mode: luminosity
+  opacity: 0.3
+  position: absolute
+  z-index: 0
+
+  div.grad
+    width: 100%
+    height: 100%
+    background: linear-gradient(to bottom, rgba(250,250,250,0) 0%,rgba(250,250,250,1) 100%)
+
+a#logo
+  margin: 50px auto
+  display: block
+  width: 250px
+  z-index: 5
+  position: relative
+
+  img
+    max-width: 100%
+
+article#homepage
+  background-color: $light-grey
+  padding: 40px 20px 20px 20px
+  max-width: 1000px
+  margin: 0px auto
+  z-index: 2
+  position: relative
+  min-height: 1000px
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.1)
+  box-sizing: border-box
+
+  *
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+  span#burger:hover
+    background-color: #dfdfdf
+
+  span#burger
+    display: none
+    width: 100%
+    padding: 15px
+    text-align: center
+    font-family: $p-stack
+    text-transform: uppercase
+
+  section#menu
+    margin-bottom: 60px
+
+  nav
+    position: absolute
+    top: 0px
+    left: 0
+    width: 100%
+    background-color: rgba(250,250,250,0.5)
+
+    ul
+      list-style-type: none
+
+
+      li:hover
+        background-color: rgba(156,31,50,0.85)
+
+        a
+          color: $background
+
+      li
+        display: inline-block
+        font-family: $p-stack
+        font-weight: 100
+        font-size: 0.9em
+        text-transform: uppercase
+        padding: 15px
+        border-right: 0.5px solid #efefef
+        margin-right: -5px !important
+
+        i
+          margin-right: 3px
+
+        a
+          color: $text
+
+@keyframes shiny
+  from
+    right: 190px
+  to
+    right: -90px
+
+section#player:hover
+  box-shadow: 0px 4px 0px rgba(0,0,0,0.2)
+  top: -75px
+
+  div#desc div#shine
+    animation-name: shiny
+    animation-duration: 1s
+
+section#player
+  width: 230px
+  height: 130px
+  background-color: $brand-red
+  box-shadow: 2px 2px 0px rgba(0,0,0,0.1)
+  position: absolute
+  right: 20px
+  top: -65px
+  transition: 0.1s
+  color: $background
+  border-radius: 1px
+  background-image: url(../img/skulls.png)
+
+  div#info
+    padding: 10px
+
+    i
+      float: right
+      padding: 10px
+      border: 2px solid $background
+      border-radius: 200px
+      width: 69px
+      height: 70px
+      font-size: 3em
+      text-align: right
+      margin-top: 5px
+
+    h4
+      font-family: $p-stack
+      font-weight: 100
+      font-size: 1.3em
+      margin: 5px 0px
+
+    h5
+      font-family: $p-stack
+      font-weight: 100
+      font-size: 0.7em
+      text-transform: uppercase
+      margin: 5px 0px
+      color: #dfdfdf
+
+  div#desc
+    position: absolute
+    bottom: 0px
+    left: 0px
+    right: 0px
+    height: 30px
+    padding: 10px
+    background-color: $dark-red
+    overflow: hidden
+
+    div#shine
+      height: 30px
+      width: 100px
+      background-color: rgba(255,255,255,0.2)
+      transform: rotate(-60deg)
+      position: absolute
+      top: -20px
+      right: 200px
+
+    p
+      font-family: $p-stack
+      font-weight: 100
+      font-size: 0.7em
+      text-transform: uppercase
+
+      i
+        margin-right: 5px
+
+section#featured
+  display: flex
+  flex-direction: row
+  width: 100%
+
+  div.featured:last-of-type
+    margin-right: 0px
+
+  div.featured::after
+    content: ""
+    display: block
+    padding-bottom: 80%
+
+  div.featured
+    width: 33%
+    margin-right: 20px
+    position: relative
+    background-size: cover
+    background-position: center
+    color: $background
+
+    a.cover
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      z-index: 3
+      transition: 0.1s
+
+    h3
+      padding: 0px 5px
+      background-color: $brand-red
+      display: table
+      font-size: 1.3em
+      position: absolute
+      bottom: 10px
+      left: -5px
+      transition: 0.1s
+      transition-timing-function: ease-in-out
+      max-width: 100%
+      margin-right: 5px
+      box-shadow: 2px 2px 0px rgba(0,0,0,0.1)
+      z-index: 6
+      pointer-events: none
+
+    ul.post-categories
+      list-style-type: none
+      position: absolute
+      top: 10px
+      right: 10px
+
+      li a
+        color: $background
+        font-weight: 100
+        font-size: 0.7em
+        text-transform: uppercase
+        font-family: $p-stack
+        background-color: $text
+        padding: 3px
+
+  div.featured:hover
+    a.cover
+      background-color: rgba(0,0,0,0.2)
+
+    h3
+      bottom: 15px
+
+div#sidebar
+  width: 33.3%
+  padding-left: 20px
+
+  div.widget
+    margin-bottom: 50px
+
+    h4
+      font-size: 1.3em
+      color: $text
+
+    hr
+      width: 30px
+      border: 3px solid $brand-red
+      margin: 5px 0px 20px 0px
+
+  div.red
+    p
+      font-family: $p-stack
+      font-size: 0.9em
+      color: $text
+
+    form
+      padding: 0px
+
+      input.email
+        margin: 10px 0px 10px 0px
+        border-radius: 1px
+        width: 100%
+        border: 0.5px solid #dfdfdf
+
+      input.button
+        border-radius: 2px
+        background-color: $dark-red
+        font-family: $p-stack
+        font-size: 0.8em
+        text-transform: uppercase
+        font-weight: 100
+
+section#latest
+  display: flex
+  flex-direction: row
+  margin-top: 50px
+
+  div#latest
+    width: 66.6%
+
+    section#promo
+      max-width: 100%
+      margin-right: 10px
+
+      img
+        max-width: 100%
+        height: auto
+
+    h2
+      color: $text
+      font-size: 3em
+
+    hr
+      width: 50px
+      border: 4px solid $brand-red
+      margin: 10px 0px 50px 0px
+
+    div#latest_box
+      display: flex
+      width: 100%
+      flex-direction: row
+      flex-wrap: wrap
+
+      div.spacer
+        width: 50%
+        margin-bottom: 20px
+        padding-right: 10px
+
+        div.latest_post
+          width: 100%
+          background-color: $background
+          position: relative
+          padding-bottom: 10px
+          height: 100%
+
+          ul.post-categories
+            list-style-type: none
+            position: absolute
+            top: 191px
+            right: 10px
+            transition: 0.1s
+
+            li a
+              color: $background
+              font-weight: 100
+              font-size: 0.7em
+              text-transform: uppercase
+              font-family: $p-stack
+              background-color: $text
+              padding: 3px
+              box-shadow: 2px 2px 0px rgba(0,0,0,0.1)
+
+          div.bg
+            width: 100%
+            height: 200px
+            background-position: center
+            background-size: cover
+
+          h3
+            color: $text
+            margin: 20px 20px 0px 20px
+
+          p
+            color: #969696
+            font-size: 0.8em
+            font-family: $p-stack
+            margin: 0px 20px 20px 20px
+            font-weight: 100
+
+          a.cover
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            z-index: 3
+            transition: 0.1s
+
+
+        div.latest_post:hover
+          ul.post-categories
+            top: 188px
+
+          a.cover
+            background-color: rgba(0,0,0,0.07)
+
+//Page styling
+
+article#homepage
+
+  div.page_content
+    h2
+      font-size: 3em
+      color: $text
+
+    div.pagination
+      margin: 30px 0px
+
+      a
+        border-radius: 2px
+        padding: 15px
+        font-size: 0.9em
+        color: #969696
+        text-transform: uppercase
+        font-family: $p-stack
+        font-weight: 100
+        transition: 0.1s
+        border: 1px solid #969696
+        margin-right: 10px
+
+      a:hover
+        background-color: #969696
+        color: $background
+
+    hr
+      border: 5px solid $brand-red
+      margin: 10px 0px 50px 0px
+      width: 80px
+
+    div.grid
+      display: flex
+      width: 100%
+      flex-direction: row
+      flex-wrap: wrap
+
+      div.spacer
+        width: 33.3%
+        margin-bottom: 20px
+        padding-right: 10px
+
+        div.latest_post
+          width: 100%
+          background-color: $background
+          position: relative
+          padding-bottom: 20px
+          height: 100%
+
+          ul.post-categories
+            list-style-type: none
+            position: absolute
+            top: 191px
+            right: 10px
+            transition: 0.1s
+
+            li a
+              color: $background
+              font-weight: 100
+              font-size: 0.7em
+              text-transform: uppercase
+              font-family: $p-stack
+              background-color: $text
+              padding: 3px
+
+          div.bg
+            width: 100%
+            height: 200px
+            background-position: center
+            background-size: cover
+
+          h3
+            color: $text
+            margin: 20px 20px 0px 20px
+
+          p
+            color: #969696
+            font-size: 0.8em
+            font-family: $p-stack
+            margin: 0px 20px 20px 20px
+            font-weight: 100
+
+          a.cover
+            position: absolute
+            top: 0
+            right: 0
+            bottom: 0
+            left: 0
+            z-index: 3
+            transition: 0.1s
+
+
+        div.latest_post:hover
+          ul.post-categories
+            top: 188px
+
+          a.cover
+            background-color: rgba(0,0,0,0.07)
+
+// Single styling
+div.single_container
+  display: flex
+  flex-direction: row
+  width: 100%
+  margin-top: 20px
+
+  div.content
+    width: 66.6%
+    overflow: hidden
+    margin-right: 20px !important
+
+    div.single_meta
+      h2
+        font-size: 3em
+        color: $text
+
+      img.featured_img
+        margin-bottom: 30px !important
+        width: 100%
+        height: auto
+
+      h5
+        font-family: $p-stack
+        font-size: 0.9em
+        font-weight: 100
+        text-transform: uppercase
+        color: $mid-grey
+        margin-bottom: 10px !important
+
+        i
+          margin: 0px 3px !important
+
+        ul, ul li
+          display: inline
+
+
+      hr
+        border: 5px solid $brand-red
+        margin: 30px 0px 50px 0px !important
+        width: 80px
+
+    p
+      margin-bottom: 15px !important
+
+    img
+      max-width: 100%
+      height: auto

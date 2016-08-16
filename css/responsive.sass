@@ -1,0 +1,74 @@
+//Styling for large desktops only
+@media (min-width: 1500px)
+
+//Styling for tablets and smaller
+@media (max-width: 1070px)
+
+  section#hero
+    height: 200px
+    position: relative
+
+  section#player
+    position: relative
+    margin: 20px auto
+    top: 0px
+    right: inherit
+
+  section#player:hover
+    top: -10px
+
+  section#menu
+    ul
+      text-align: center
+
+  a#logo
+    margin: 20px auto
+    width: 150px
+    position: absolute
+    top: 25px
+    left: 50%
+    transform: translateX(-50%)
+
+  article#homepage
+    padding: 0px 0px 20px 0px
+
+    section#menu
+      margin-bottom: 20px
+
+    div.single_container
+      flex-direction: column
+
+      div.content, div#sidebar
+        width: 100%
+        padding: 10px
+
+        div.single_meta
+          h2
+            font-size: 2.2em
+
+  .mobilehide
+    display: none !important
+
+  .mobileshow
+    display: block !important
+
+
+//Styling for phones and smaller
+@media (max-width: 650px)
+  section#featured
+    flex-direction: column
+
+    div.featured
+      width: 100%
+      margin-right: none
+      margin-bottom: 10px
+
+  section#menu
+    nav
+      display: none
+
+    span#burger
+      display: block
+
+
+@media (max-width: 500px)
