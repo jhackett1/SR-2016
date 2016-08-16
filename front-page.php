@@ -6,7 +6,7 @@
     //The loop
     $featured_query = new WP_Query(
       array(
-        'cat' => '12',
+        'cat' => '1',
         'posts_per_page' => '3'
       )
     );

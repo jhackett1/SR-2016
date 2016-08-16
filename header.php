@@ -75,14 +75,14 @@
   </section>
 
   <!-- The player icon -->
-  <a href="http://uwsu.com/player/player.html"
+  <a href="http://uwsu.com/player/index.html"
     onclick="return !window.open(this.href, 'Listen Live', 'resizable=no,width=300,height=615')"
     target="_blank">
     <section id="player" class="wow animated fadeInDown" data-wow-delay="0.6s" data-wow-duration="0.4s">
       <div id="info">
         <i class="fa fa-play"></i>
-        <h5>Artist name</h5>
-        <h4>Song title goes here</h4>
+        <h5>Smoke Radio</h5>
+        <h4>Jukebox</h4>
       </div>
       <div id="desc">
         <p><i class="fa fa-music"></i> Listen live!</p>
