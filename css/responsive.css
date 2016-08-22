@@ -30,7 +30,12 @@
     transform: translateX(-50%); }
 
   article#homepage {
-    padding: 0px 0px 20px 0px; }
+    padding: 20px 10px 40px 10px !important; }
+    article#homepage div.page_content div.grid {
+      flex-direction: column;
+      flex-wrap: nowrap; }
+      article#homepage div.page_content div.grid div.spacer {
+        width: 100%; }
     article#homepage section#menu {
       margin-bottom: 20px; }
     article#homepage div.single_container {
