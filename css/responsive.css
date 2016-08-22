@@ -27,19 +27,14 @@
     position: absolute;
     top: 25px;
     left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%); }
+    transform: translateX(-50%); }
 
   article#homepage {
     padding: 0px 0px 20px 0px; }
     article#homepage section#menu {
       margin-bottom: 20px; }
     article#homepage div.single_container {
-      -webkit-box-orient: vertical;
-      -webkit-box-direction: normal;
-      -webkit-flex-direction: column;
-          -ms-flex-direction: column;
-              flex-direction: column; }
+      flex-direction: column; }
       article#homepage div.single_container div.content, article#homepage div.single_container div#sidebar {
         width: 100%;
         padding: 10px; }
@@ -47,11 +42,7 @@
           font-size: 2.2em; }
 
   section#featured {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column; }
+    flex-direction: column; }
     section#featured div.featured {
       width: 100%;
       margin-right: 0px;
@@ -60,20 +51,12 @@
         left: 10px; }
 
   section#latest {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column; }
+    flex-direction: column; }
     section#latest div#latest {
       margin: 0px 5px;
       width: 100% !important; }
       section#latest div#latest div#latest_box {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -webkit-flex-direction: column;
-            -ms-flex-direction: column;
-                flex-direction: column; }
+        flex-direction: column; }
         section#latest div#latest div#latest_box div.spacer {
           width: 100%; }
 
@@ -84,3 +67,20 @@
 
   footer {
     margin-bottom: 50px; } }
+@media (max-width: 500px) {
+  #player.animated {
+    -o-transition-property: none !important;
+    -moz-transition-property: none !important;
+    -ms-transition-property: none !important;
+    -webkit-transition-property: none !important;
+    transition-property: none !important;
+    -o-transform: none !important;
+    -moz-transform: none !important;
+    -ms-transform: none !important;
+    -webkit-transform: none !important;
+    transform: none !important;
+    -webkit-animation: none !important;
+    -moz-animation: none !important;
+    -o-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important; } }
