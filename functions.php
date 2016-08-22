@@ -69,7 +69,7 @@ add_action( 'widgets_init', 'sidebar' );
 //Hide the "featured" category and others on the front-end
 			add_filter('get_the_terms', 'hide_categories_terms', 10, 3);
 			function hide_categories_terms($terms, $post_id, $taxonomy){
-			    $exclude = array('featured', 'uncategorized', 'sport-news', 'screen-review', 'screen-news', 'sport-feature', 'lifestyle-news', 'lifestyle-feature', 'uni-news', 'lifestyle-review', 'arts-review', 'arts-feature', 'arts-news', 'arts-short-fuse', 'music-review', 'music-feature', 'music-short-fuse', 'music-news', 'games-review', 'games-feature', 'games-news', 'games-short-fuse', 'local-news');
+			    $exclude = array('featured', 'uncategorized', 'uncategorised', 'sport-news', 'screen-review', 'screen-news', 'sport-feature', 'lifestyle-news', 'lifestyle-feature', 'uni-news', 'lifestyle-review', 'arts-review', 'arts-feature', 'arts-news', 'arts-short-fuse', 'music-review', 'music-feature', 'music-short-fuse', 'music-news', 'games-review', 'games-feature', 'games-news', 'games-short-fuse', 'local-news');
 			    if (!is_admin()) {
 			        foreach($terms as $key => $term){
 			            if($term->taxonomy == "category"){

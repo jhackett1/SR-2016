@@ -70,6 +70,9 @@
   section#menu span#burger {
     display: block; }
 
+  div.smoke-media-menu-container {
+    column-count: 2; }
+
   footer {
     margin-bottom: 50px; } }
 @media (max-width: 500px) {

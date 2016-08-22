@@ -7,19 +7,47 @@
   <link rel="shortcut icon" href="<?php echo get_stylesheet_directory_uri(); ?>/favicon.png" />
   <?php wp_head(); ?>
 
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@WminSmokeTV">
-  <meta name="twitter:creator" content="@WminSmokeTV">
-  <meta name="twitter:title" content="Smoke TV">
-  <meta name="twitter:description" content="Student television at the University of Westminster">
-  <meta name="twitter:image" content="http://uwsu.com/tv/wp-content/uploads/sites/5/2016/08/13669634_1169001193166863_7980080959781773292_n.jpg">
+  <!-- Open graph meta tags -->
+    <?php if (have_posts()):while(have_posts()):the_post(); endwhile; endif;?>
+    <!-- the default values -->
+    <meta property="fb:app_id" content="1134129026651501" />
+    <!-- <meta property="fb:admins" content="1179665522100430" /> -->
 
-  <meta property="fb:app_id" content="1134129026651501" />
-  <meta property="og:url" content="<?php the_permalink() ?>"/>
-  <meta property="og:title" content="Smoke TV" />
-  <meta property="og:description" content="Student television at the University of Westminster" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="http://uwsu.com/tv/wp-content/uploads/sites/5/2016/08/13669634_1169001193166863_7980080959781773292_n.jpg">
+    <!-- if page is content page -->
+    <?php if (is_single()) {
+
+    $feat = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'ogimg' );
+    $feat = $feat[0];
+    ?>
+
+      <meta property="og:url" content="<?php the_permalink() ?>"/>
+      <meta property="og:title" content="<?php single_post_title(''); ?>" />
+      <meta property="og:description" content="<?php echo strip_tags(get_the_excerpt($post->ID)); ?>" />
+      <meta property="og:type" content="article" />
+      <meta property="og:image" content="<?php echo $feat; ?>" />
+
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@Smoke_Radio">
+      <meta name="twitter:creator" content="@Smoke_Radio">
+      <meta name="twitter:title" content="<?php the_title(); ?>">
+      <meta name="twitter:description" content="<?php the_excerpt(); ?>">
+      <meta name="twitter:image" content="<?php echo $feat; ?>">
+
+      <!-- if not single -->
+      <?php } else { ?>
+      <meta property="og:site_name" content="<?php bloginfo('name'); ?>" />
+      <meta property="og:description" content="<?php bloginfo('description'); ?>" />
+      <meta property="og:type" content="website" />
+      <meta property="og:image" content="http://uwsu.com/player/img/poster.jpg" />
+
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@Smoke_Radio">
+      <meta name="twitter:creator" content="@Smoke_Radio">
+      <meta name="twitter:title" content="<?php bloginfo('name'); ?>">
+      <meta name="twitter:description" content="<?php bloginfo('description'); ?>">
+      <meta name="twitter:image" content="http://uwsu.com/player/img/poster.jpg">
+
+    <?php } ?>
 
 </head>
 <body>
